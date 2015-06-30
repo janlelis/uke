@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+
+#require 'uke'
+require_relative '../lib/uke'
+require 'rationalist'
+
+args = Rationalist.parse(
+  boolean: [:help, :version],
+  string: [:style],
+  default: { style: :small },
+  alias: { s: :style, v: :version }
+)
+
+case
+when args[:v]
+  $stderr.puts Uke::VERSION
+when args[:help]
+  puts <<BANNER
+
+ DESCRIPTION
+
+    Displays popular ukulele chords
+
+ USAGE
+
+    Pass the chords to display as arguments
+
+    Run without arguments for a list of included chords
+
+ EXAMPLE
+
+    uke-chords G B7 C Cm
+
+BANNER
+when args[:_].empty?
+  Uke.new.print_chord_list
+else
+  Uke.new.print_chords args[:_], args[:style]
+end
