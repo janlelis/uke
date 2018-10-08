@@ -5,8 +5,8 @@ require File.dirname(__FILE__) + "/lib/uke/version"
 Gem::Specification.new do |gem|
   gem.name          = "uke"
   gem.version       = Uke::VERSION
-  gem.summary       = "Displays popular ukulele chords"
-  gem.description   = "Displays popular ukulele chords for the popular `GCEA` tuning"
+  gem.summary       = "𝄝 Displays popular ukulele chords"
+  gem.description   = "𝄝 Displays popular ukulele chords for the popular `GCEA` tuning"
   gem.authors       = ["Jan Lelis"]
   gem.email         = ["mail@janlelis.de"]
   gem.homepage      = "https://github.com/janlelis/uke"
