@@ -54,6 +54,23 @@ $ uke-chords G B7 C Cm
 
 ```
 
+You can also get suggestions which fingers to use with the `--style fingering` option:
+
+```
+$ uke-chords --style fingering C
+
+           	 ◯  ◯  ◯   	 ◯     ◯   	 ◯         
+           	 ╒══╤══╤══╕	 ╒══╤══╤══╕	 ╒══╤══╤══╕
+     _____ 	 │  │  │  │	 │  │  │  │	 │  │  │  │
+    / ____|	 ├──┼──┼──┤	 ├──┼──┼──┤	 ├──┼──┼──┤
+   | |     	 │  │  │  │	 │  │  │  │	 │  │  │  │
+   | |     	 ├──┼──┼──┤	 ├──┼──┼──┤	 ├──┼──┼──┤
+   | |____ 	 │  │  │ ➊	 │  │  │ ➊	 │  │  ➊ ➊
+    \_____|	 ├──┼──┼──┤	 ├──┼──┼──┤	 ├──┼──┼──┤
+           	 │  │  │  │	 │  ➋  │  │	 │  ➋  │  │
+           	 └──┴──┴──┘	 └──┴──┴──┘	 └──┴──┴──┘
+```
+
 ## Setup
 
 Make sure that your computer has [Ruby 2.0 or higher installed](http://ruby.about.com/od/tutorials/a/installruby.htm).
