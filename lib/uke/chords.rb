@@ -1,15 +1,24 @@
 class Uke
   class Chord
-    attr_reader :name, :positions, :fingers
+    attr_reader :name, :key, :positions, :fingers
 
     def initialize(line)
       parts = line.split(/\s{2,}/).map { |part| part.split(',') }
 
-      @name =  parts[0].join.tr(' ', '')
+      @name = parts[0].join.tr(' ', '')
+      @key = @name[0...2]
       @positions = parts[1].map(&:to_i)
       @fingers = parts[2] && parts[2].map(&:to_i)
     end
   end
+
+  ENHARMONIC_EQUIVALENTS = {
+    'A#' => 'Bb',
+    'C#' => 'Db',
+    'D#' => 'Eb',
+    'F#' => 'Gb',
+    'G#' => 'Ab'
+  }
 
   # compare https://ukulele-chords.com and https://ukulelehelper.com
   CHORDS_RAW = <<CHORDS_RAW
@@ -275,8 +284,16 @@ CHORDS_RAW
 
   CHORDS = Hash.new { |h, k| h[k] = [] }
 
-  CHORDS_RAW.split($/).delete_if(&:empty?).each { |line|
+  CHORDS_RAW.split($/).delete_if(&:empty?).each do |line|
     chord = Chord.new(line)
     CHORDS[chord.name] << chord
-  }
+
+    equivalent = ENHARMONIC_EQUIVALENTS[chord.key]
+
+    if equivalent
+      equivalent_line = line.sub(chord.key, equivalent)
+      equivalent_chord = Chord.new(equivalent_line)
+      CHORDS[equivalent_chord.name] << equivalent_chord
+    end
+  end
 end
