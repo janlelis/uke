@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.summary       = "𝄝 Displays popular ukulele chords"
   gem.description   = "𝄝 Displays popular ukulele chords for the popular `GCEA` tuning"
   gem.authors       = ["Jan Lelis"]
-  gem.email         = ["mail@janlelis.de"]
+  gem.email         = ["hi@ruby.consulting"]
   gem.homepage      = "https://github.com/janlelis/uke"
   gem.license       = "MIT"
 
@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.required_ruby_version = "~> 2.0"
+  gem.required_ruby_version = ">= 2.0"
   gem.add_dependency 'rationalist', '~> 2.0'
   gem.add_dependency 'artii', '~> 2.1'
 end
