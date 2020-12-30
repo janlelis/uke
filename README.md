@@ -1,11 +1,11 @@
-# uke gem [![[version]](https://badge.fury.io/rb/uke.svg)](http://badge.fury.io/rb/uke)
+# uke gem [![[version]](https://badge.fury.io/rb/uke.svg)](https://badge.fury.io/rb/uke)
 
 Displays popular ukulele chords for the popular `GCEA` tuning like this:
 
 ```
 $ uke-chords G B7 C Cm
-           
-             ⚪                     
+
+             ⚪
              ╒══╤══╤══╕  ╒══╤══╤══╕
      _____   │  │  │  │  │  │  │  │
     / ____|  ├──┼──┼──┤  ├──┼──┼──┤
@@ -15,8 +15,8 @@ $ uke-chords G B7 C Cm
     \_____|  ├──┼──┼──┤  ├──┼──┼──┤
              │  │  │  │  ●  │  │  │
              └──┴──┴──┘  └──┴──┴──┘
-           
-                
+
+
                                         ⚪
                    ╒══╤══╤══╕  ╒══╤══╤══╕
     ____ ______    │  │  │  │  │  │  │  │
@@ -27,9 +27,9 @@ $ uke-chords G B7 C Cm
    |____//_/       ├──┼──┼──┤  ├──┼──┼──┤
                    │  │  │  │  ●  │  │  │
                    └──┴──┴──┘  └──┴──┴──┘
-                
-           
-             ⚪  ⚪  ⚪     ⚪     ⚪     ⚪         
+
+
+             ⚪  ⚪  ⚪     ⚪     ⚪     ⚪
              ╒══╤══╤══╕  ╒══╤══╤══╕  ╒══╤══╤══╕
      _____   │  │  │  │  │  │  │  │  │  │  │  │
     / ____|  ├──┼──┼──┤  ├──┼──┼──┤  ├──┼──┼──┤
@@ -39,9 +39,9 @@ $ uke-chords G B7 C Cm
     \_____|  ├──┼──┼──┤  ├──┼──┼──┤  ├──┼──┼──┤
              │  │  │  │  │  ●  │  │  │  ●  │  │
              └──┴──┴──┘  └──┴──┴──┘  └──┴──┴──┘
-           
-                     
-                       ⚪         
+
+
+                       ⚪
                        ╒══╤══╤══╕
      _____             │  │  │  │
     / ____|            ├──┼──┼──┤
@@ -59,7 +59,7 @@ You can also get suggestions which fingers to use with the `--style fingering` o
 ```
 $ uke-chords --style fingering C
 
-           	 ◯  ◯  ◯   	 ◯     ◯   	 ◯         
+           	 ◯  ◯  ◯   	 ◯     ◯   	 ◯
            	 ╒══╤══╤══╕	 ╒══╤══╤══╕	 ╒══╤══╤══╕
      _____ 	 │  │  │  │	 │  │  │  │	 │  │  │  │
     / ____|	 ├──┼──┼──┤	 ├──┼──┼──┤	 ├──┼──┼──┤
@@ -73,9 +73,7 @@ $ uke-chords --style fingering C
 
 ## Setup
 
-Make sure that your computer has [Ruby 2.0 or higher installed](http://ruby.about.com/od/tutorials/a/installruby.htm).
-
-Then run
+Make sure that your computer has Ruby 2.0 or higher installed. Then run
 
 ```ruby
 gem install uke
@@ -89,5 +87,5 @@ Run `uke-chords` without any parameters for a list of included chords.
 
 ## MIT License
 
-Except for the chords, copyright (C) 2015 Jan Lelis <http://janlelis.com>. Released under the MIT license.
+Except for the chords, copyright (C) 2015 Jan Lelis <https://janlelis.com>. Released under the MIT license.
 
